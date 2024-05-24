@@ -7,7 +7,7 @@ export const SITE: Site = {
   title: "Isaac Fei",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 
@@ -50,9 +50,9 @@ export const SOCIALS: SocialObjects = [
   // },
   {
     name: "Mail",
-    href: "isaac.omega.fei@gmail.com",
+    href: "mailto:isaac.omega.fei@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
-    active: false,
+    active: true,
   },
   {
     name: "Twitter",
@@ -74,9 +74,9 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "WhatsApp",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://wa.me/56435296",
     linkTitle: `${SITE.title} on WhatsApp`,
-    active: false,
+    active: true,
   },
   {
     name: "Snapchat",

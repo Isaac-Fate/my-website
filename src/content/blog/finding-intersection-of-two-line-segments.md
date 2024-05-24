@@ -1,0 +1,17 @@
+---
+author: Isaac Fei
+pubDatetime: 2024-05-20T00:38:00+08:00
+modDatetime: 2024-05-20T00:38:00+08:00
+title: Finding Intersection of Two Line Segments
+slug: finding-intersection-of-two-line-segments
+featured: true
+draft: false
+tags:
+- Geometry
+- Linear Algebra
+- Python
+- NumPy
+description:
+  Details all possible cases you need to consider when finding the intersection of two line segments with full implementation in Python.
+  Also, some floating error issues you may keep in mind.
+---

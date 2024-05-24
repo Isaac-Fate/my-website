@@ -83,8 +83,7 @@ const layoutProps = {
       {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
     </ul>
 
-    <!-- The comments section -->
-    <PostComments/>
+   
 
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
@@ -102,8 +101,11 @@ const layoutProps = {
       </button>
 
       <ShareLinks />
-
     </div>
+
+     <!-- The comments section -->
+     <PostComments/>
+     
   </main>
   <Footer />
 </Layout>

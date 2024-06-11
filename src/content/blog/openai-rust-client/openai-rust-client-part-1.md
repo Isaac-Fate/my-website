@@ -131,7 +131,7 @@ There are some flaws with this approach.
 First, it enforces the user to provide the API key.
 (Well, we have some workarounds for that. For example, we could revise `new` to read the API key from environment variables by default, and create another method to allow the user to set the API key manually if they want.)
 But another problem is that we are passing a (Reqwest) *client* into an (OpenAI) *client*, which is rather awkward.
-Instead, we would like the user to use our `OpenAIClient` just like they would use the Reqwest client.
+Instead, we would like the users to use our `OpenAIClient` just like they would use the Reqwest client.
 
 
 We can fix this with a builder pattern.

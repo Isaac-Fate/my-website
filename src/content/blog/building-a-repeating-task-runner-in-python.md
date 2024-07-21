@@ -12,6 +12,8 @@ tags:
 description: How to run a task repeatedly every once in a while in the background with the functionality of resetting the timer to postpone the execution of the current started task.
 ---
 
+![Building a Repeating Task Runner in Python](/images/building-a-repeating-task-runner-in-python.png)
+
 In this post, I will show how to run a task (Python function) repeatedly every once in a while in the background. 
 And you may reset the timer to postpone the execution of the current started task.
 

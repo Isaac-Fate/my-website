@@ -16,6 +16,8 @@ I have just started diving into Rust and thought it would be interesting to docu
 
 However, to keep things clear and focused, I will not list every single detail or pasting the complete code here.
 
+You may visit my [repository](https://github.com/Isaac-Fate/rustyopenai) for full implementation.
+
 
 ## Getting Started
 

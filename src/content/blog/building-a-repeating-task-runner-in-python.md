@@ -1,6 +1,6 @@
 ---
 author: Isaac Fei
-pubDatetime: 2024-06-16T07:41:49.012Z
+pubDatetime: 2024-07-21T08:36:26.903Z
 modDatetime: null
 title: "Building a Repeating Task Runner in Python"
 slug: building-a-repeating-task-runner-in-python
@@ -164,6 +164,45 @@ else:
 ```
 
 If the reset event is not set within the interval, the task is executed. The task can be run with or without arguments, depending on whether `task_args` is provided.
+
+## Side Notes
+
+At first, in the `stop` method, I called `self._thread.join()` at the end, 
+which is what one usually does to stop a thread. 
+Well, more precisely, to wait for the thread to finish.
+
+```py
+def stop(self) -> None:
+
+    # Set the stop event
+    self._stop_event.set()
+
+    # Why not this?
+    #
+    # Join the thread
+    self._thread.join()
+```
+
+But then, the runner will not stop immediately when this method is called
+since it will wait for the thread to finish and hence wait for the reset event to be set.
+
+```py
+if self._reset_event.wait(self._interval):
+```
+
+Without joining the thread, when calling `stop`, the thread will still be running at the background.
+But it will not block the main program, 
+and when it finishes waiting for the reset event, 
+the task will not be executed since we have this block of code:
+
+```py
+# Exit the loop if the stop event is set
+if self._stop_event.is_set():
+    break
+```
+
+
+
 
 ## Usage Example
 
